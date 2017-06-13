@@ -31,3 +31,13 @@
 
 en:
   hello: "Hello world"
+  static_pages:
+    title: "Project 1"
+    home: "Home Pages"
+    about: "About"
+    help: "Help"
+    author: "trung"
+    toggle: "Toggle navigation"
+  author:
+    the: "the"
+    by: "by"
