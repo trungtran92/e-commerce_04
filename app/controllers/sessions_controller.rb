@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  #skip_before_action :require_login, only: [:new, :create]
 
   def new
   end
@@ -10,14 +9,14 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to user
     else
-      flash.now[:danger] = "Invalid email/password combination"
+      flash.now[:danger] = t "Login_fail"
       render :new
     end
   end
 
   def destroy
     log_out
-    flash[:success] = "You are logged out"
+    flash[:success] = t "logout_success"
     redirect_to login_path
   end
 end
