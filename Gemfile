@@ -13,9 +13,10 @@ gem "puma", "~> 3.7"
 gem "rails", "~> 5.1.1"
 gem "sqlite3"
 gem "sass-rails", "~> 5.0"
-gem "turbolinks", "~> 5"
 gem "uglifier", "~> 1.3.0"
 gem "rubocop", "~> 0.49.1", require: false
+gem "jquery-rails", "4.3.1"
+gem "config"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
