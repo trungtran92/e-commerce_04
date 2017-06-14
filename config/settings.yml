@@ -1,0 +1,7 @@
+name_user_maximum: 50
+email_maximum: 255
+password_minimum: 6
+maximum_content: 500
+maximum_name: 255
+minimum_quantity: 0
+maximum_address: 255
