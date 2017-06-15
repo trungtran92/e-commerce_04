@@ -62,12 +62,17 @@ en:
   save_changes: "Save changes"
   error: "error"
   please_log_in: "Please log in."
+  the_form_contains: "the form contains"
   flash:
     success:
       Login_success: "Login success"
       logout_success: "You are logged out"
       register_success: "Register success"
+      profile_updated_success: "Profile updated"
     danger:
       login_fail: "Invalid email/password combination"
       register_failed: "Register failed"
       register_user_fail: "register user fail"
+      profile_updated_fails: "Profile updated fail"
+      "user_not_admin": "user not admin"
+  user_admin: "admin"
