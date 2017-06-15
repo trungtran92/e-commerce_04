@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   before_action :require_login, only: :show
-  before_action :set_user, except: [:new, :create]
+  before_action :load_user, except: [:new, :create, :index]
+  before_action :verify_admin, only: :index
+
+  def index; end
 
   def new
     @user = User.new
@@ -19,22 +22,36 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
+  def show;  end
 
+  def edit; end
+
+  def update
+    if @user.update_attributes(user_params)
+      flash[:success] = t "flash.success.profile_updated_success"
+      redirect_to @user
+    else
+      render :edit
+    end
   end
 
   private
-
-  def set_user
+  def load_user
     @user = User.find_by id: params[:id]
-    unless @user
-      flash[:danger] = t "please_log_in"
-      redirect_to root_url
-    end
+    return if @user
+    flash[:danger] = t "please_log_in"
+    redirect_to root_url
+  end
+
+  def require_login
+    return if logged_in?
+    flash[:danger] = t "please_log_in"
+    redirect_to login_path
   end
 
   def user_params
     params.require(:user).permit :name, :email, :password,
       :password_confirmation
   end
+
 end
