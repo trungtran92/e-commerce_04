@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   resources :users
 
   get "/static_pages/*page", to: "static_pages#show"
+
+  namespace :admin do
+    resources :users, only: [:index, :destroy]
+  end
 end

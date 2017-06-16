@@ -5,8 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem "bootstrap-sass", "~> 3.3.6"
 gem "bcrypt", "~> 3.1.7"
+gem "bootstrap-sass", "~> 3.3.6"
 gem "config"
 gem "coffee-rails", "~> 4.2"
 gem "jbuilder", "~> 2.5"
@@ -15,6 +15,7 @@ gem "rails", "~> 5.1.1"
 gem "sqlite3"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", "~> 1.3.0"
+gem "kaminari"
 gem "rubocop", "~> 0.49.1", require: false
 gem "jquery-rails", "4.3.1"
 
