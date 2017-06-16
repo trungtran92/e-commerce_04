@@ -1,9 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_login, only: :show
-  before_action :load_user, except: [:new, :create, :index]
-  before_action :verify_admin, only: :index
-
-  def index; end
+  before_action :load_user, except: [:new, :create]
 
   def new
     @user = User.new
@@ -36,12 +33,6 @@ class UsersController < ApplicationController
   end
 
   private
-  def load_user
-    @user = User.find_by id: params[:id]
-    return if @user
-    flash[:danger] = t "please_log_in"
-    redirect_to root_url
-  end
 
   def require_login
     return if logged_in?
@@ -53,5 +44,4 @@ class UsersController < ApplicationController
     params.require(:user).permit :name, :email, :password,
       :password_confirmation
   end
-
 end
