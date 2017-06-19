@@ -6,7 +6,7 @@ class Admin::UsersController < ApplicationController
   def index
     @users = User.select(:id, :name, :email, :is_admin,
       :created_at).order(:name)
-      .paginate page: params[:page], per_page: Settings.per_page
+      .page(params[:page]).per(Settings.per_page)
   end
 
   def destroy

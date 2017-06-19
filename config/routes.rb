@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/static_pages/*page", to: "static_pages#show"
 
   namespace :admin do
+    resources :categories
     resources :users, only: [:index, :destroy]
   end
 end
