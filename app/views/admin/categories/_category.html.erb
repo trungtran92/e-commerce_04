@@ -1,0 +1,13 @@
+<tr>
+  <td><%= admin_page params[:page], category_counter %></td>
+  <td><%= category.name %></td>
+  <td><%= category.products.size %></td>
+  <td><%= link_to t(".edit"),
+    edit_admin_category_path(category), class: "btn btn-success"%>
+  </td>
+  <td>
+    <%= link_to t(".delete"),
+      admin_category_path(category), method: :delete, class: "btn btn-danger",
+      data: {confirm: t("sure?")} %>
+  </td>
+</tr>

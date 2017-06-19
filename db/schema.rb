@@ -32,8 +32,6 @@ ActiveRecord::Schema.define(version: 20170613041740) do
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
     t.integer "status"
-    t.float "total_price"
-    t.integer "total_product"
     t.string "address_recive"
     t.string "phone_recive"
     t.datetime "created_at", null: false
