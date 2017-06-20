@@ -18,6 +18,8 @@ gem "uglifier", "~> 1.3.0"
 gem "kaminari"
 gem "rubocop", "~> 0.49.1", require: false
 gem "jquery-rails", "4.3.1"
+gem "carrierwave", "~> 0.10.0"
+gem "mini_magick", "~> 4.3"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
