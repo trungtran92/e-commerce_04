@@ -102,6 +102,8 @@ en:
       destroy_product_fail: "destroy product fail"
     warning:
       category_warning: "cant load category"
+      trend_product_warning: "not found hot trend product"
+      not_found_product: "not_found_product"
   admin:
     admin_list: "admin"
     not_admin: "You are not authorized to access this page"
@@ -147,4 +149,8 @@ en:
     new_product: "Add new products"
     edit_product: "edit product"
     cant_delete_product: "cant delete product"
+    add_cart: "Add Card"
+    rate: "rate"
+    rate_point: "rate_point"
+    hot_trend_products: "hot trend products"
 

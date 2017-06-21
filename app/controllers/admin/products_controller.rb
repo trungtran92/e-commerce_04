@@ -7,7 +7,7 @@ class Admin::ProductsController < ApplicationController
   def index
     @products = Product.select(:id, :name, :description, :price,
       :category_id, :image, :quantity).order(:name)
-      .includes(:products).page(params[:page]).per(Settings.per_page)
+      .includes(:category).page(params[:page]).per Settings.per_page
   end
 
   def new
