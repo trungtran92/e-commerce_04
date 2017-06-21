@@ -1,0 +1,44 @@
+<%= form_for [:admin, @product], html: {multipart: true} do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <div class="form-group">
+    <%= f.label :category_id %>
+    <%= f.select :category_id,
+      @categories.collect {|c| [ c.name, c.id ]},
+      {prompt: t("products.chose_product")},
+      class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, cols: "20", rows: "5", class:
+      "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :price %> <b><%= t "products.price" %></b>
+    <%= f.text_field :price, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "form-control" %>
+    <% if f.object.image? %>
+      <%= image_tag f.object.image.thumb.url %>
+      <%= f.label :remove_image %>
+      <%= f.check_box :remove_image %>
+    <% end %>
+    </div>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

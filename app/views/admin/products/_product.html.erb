@@ -1,0 +1,16 @@
+<tr>
+  <td><%= admin_page params[:page], product_counter %></td>
+  <td><%=link_to product.name, admin_product_path(product) %></td>
+  <td><%= product.category ? product.category.name : "" %></td>
+  <td><%= product.description %></td>
+  <td><%= product.quantity %></td>
+  <td><%= product.price %></td>
+  <td><%= link_to t("edit"),
+    edit_admin_product_path(product), class: "btn btn-success" %>
+  </td>
+  <td>
+    <%= link_to t("delete"),
+      admin_product_path(product), method: :delete, class: "btn btn-danger",
+      data: {confirm: t("sure?")} %>
+  </td>
+</tr>
