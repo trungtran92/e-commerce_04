@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <%= image_tag @product.image.url,
+      id: "resize_img_product",
+      class: "img-responsive img-thumbnail" if @product.image? %>
+  </div>
+  <div class="col-xs-12 col-sm-6 product-detail">
+    <h3 id="product-title"><%= @product.name %></h3>
+    <h4><%= t "products.description" %></h4>
+    <%= @product.description %>
+    <h4>
+        <%= t "products.quantity" %>: <%= @product.quantity %>
+    </h4>
+    <h4>
+        <%= t "products.price" %>: <%= @product.price %>
+        <%= t "products.vnd" %>
+    </h4>
+    <div class="btn-group" role="group">
+      <%= link_to t("products.add_cart"),
+        cart_path(id: @product.id), method: :post,
+        class: "btn btn-info right" %>
+    </div>
+    <h3>
+      <span class="label label-default">
+        <%= t "products.rate_point" %>
+      </span>
+      <span id="average" class="label label-success">
+        <%= @product.rate_point %>
+      </span>
+    </h3>
+    <div class="fb-share-button" data-href="<%= request.original_url %>"
+      data-layout="button" data-size="small" data-mobile-iframe="true">
+      <a class="fb-xfbml-parse-ignore" target="_blank"></a>
+    </div>
+  </div>
+</div>

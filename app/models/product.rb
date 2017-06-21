@@ -10,4 +10,6 @@ class Product < ApplicationRecord
   validates :price, presence: true,
     length: {maximum: Settings.maximum_price, minimum: Settings.minimum_price}
 
+  scope :trend_product, ->{order(rate_point: :asc, created_at: :desc)
+    .limit Settings.hot_trend_products}
 end

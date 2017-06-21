@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post "login", to: "sessions#create"
   get "logout", to: "sessions#destroy"
   resources :users
+  resources :products
+  resources :cart
 
   get "/static_pages/*page", to: "static_pages#show"
 

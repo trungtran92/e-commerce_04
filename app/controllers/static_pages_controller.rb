@@ -1,5 +1,11 @@
 class StaticPagesController < ApplicationController
   def home
+    @hot_trend_products = Product.trend_product
+      .select :id, :name, :description, :price, :category_id, :image, :quantity
+
+    @list_products = Product.select(:id, :name, :description, :price,
+      :category_id, :image, :quantity).order(:name)
+      .page(params[:page]).per Settings.per_page
   end
 
   def show

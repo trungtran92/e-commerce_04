@@ -1,0 +1,28 @@
+<div class="col-md-3 col-sm-6">
+  <span class="thumbnail">
+    <%= link_to product_path(product) do %>
+      <%= image_tag product.image.url %>
+    <% end %>
+    <h4><%= link_to product.name, product_path(product) %></h4>
+    <div class="ratings">
+      <span class="glyphicon glyphicon-star"></span>
+      <span class="glyphicon glyphicon-star"></span>
+      <span class="glyphicon glyphicon-star"></span>
+      <span class="glyphicon glyphicon-star"></span>
+      <span class="glyphicon glyphicon-star-empty"></span>
+    </div>
+    <p>
+      <%= truncate product.description, length: Settings.limit_info %>
+    </p>
+    <hr class="line">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <p class="price"><%= product.price %></p>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <%= link_to t("products.add_cart"),
+          class: "btn btn-info right" %>
+      </div>
+    </div>
+  </span>
+</div>
