@@ -1,8 +1,13 @@
+<% content_for :head do %>
+    <meta property="fb:app_id" content=<%= Settings.facebook.app_id%> />
+    <meta property="og:type"   content=<%= Settings.domain%> />
+    <meta property="og:url"    content="<%= Settings.domain + product_path(@product) %>"/>
+    <meta property="og:title"  content="Sample" />
+    <meta property="og:image"  content="https://fbstatic-a.akamaihd.net/images/devsite/attachment_blank.png" />
+<% end %>
 <div class="row">
   <div class="col-xs-12 col-sm-6">
-    <%= image_tag @product.image.url,
-      id: "resize_img_product",
-      class: "img-responsive img-thumbnail" if @product.image? %>
+    <%= image_tag @product.image.thumb.url%>
   </div>
   <div class="col-xs-12 col-sm-6 product-detail">
     <h3 id="product-title"><%= @product.name %></h3>
@@ -15,6 +20,11 @@
         <%= t "products.price" %>: <%= @product.price %>
         <%= t "products.vnd" %>
     </h4>
+    <%= link_to "Share on Facebook",
+      "https://www.facebook.com/dialog/feed?
+      app_id=#{Settings.facebook.app_id}&display=popup
+      &link=#{product_url(@product)}
+      &redirect_uri=#{product_url(@product)}", :target => :blank %>
     <div class="btn-group" role="group">
       <%= link_to t("products.add_cart"),
         cart_path(id: @product.id), method: :post,

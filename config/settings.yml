@@ -16,3 +16,6 @@ maximum_name: 50
 resize_to_fit_width: 50
 resize_to_fit_height: 50
 limit_info: 70
+domain: http://localhost:3000/
+facebook:
+  app_id: 1481111758594390

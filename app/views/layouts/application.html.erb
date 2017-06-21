@@ -6,6 +6,7 @@
     <%= javascript_include_tag "application",
       "data-turbolinks-track": "reload" %>
     <%= csrf_meta_tags %>
+    <%= content_for?(:head) ? yield(:head) : '' %>
   </head>
   <body>
     <%= render "layouts/header" %>
