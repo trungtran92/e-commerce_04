@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :users
   resources :products
   resources :cart
+  resources :category
 
   get "/static_pages/*page", to: "static_pages#show"
 

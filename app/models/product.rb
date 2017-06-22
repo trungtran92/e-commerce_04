@@ -12,4 +12,10 @@ class Product < ApplicationRecord
 
   scope :trend_product, ->{order(rate_point: :asc, created_at: :desc)
     .limit Settings.hot_trend_products}
+  scope :search, ->search {where "name || price like ?", "%#{search}%"}
+  scope :approved_status, ->{where(status: true)}
+  scope :alphabet, -> {order(name: :asc)}
+  scope :rating, -> {order(rate_point: :desc)}
+  scope :price_high_to_low, -> {order(price: :desc)}
+  scope :price_low_to_high, -> {order(price: :asc)}
 end

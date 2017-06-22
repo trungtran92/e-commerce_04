@@ -1,0 +1,67 @@
+<% provide :title, t("products.title") %>
+<h1 class="text-center"><%= t "products.index" %></h1>
+<div class="text-center">
+  <div class="dropdown categories">
+    <button class="btn btn-default dropdown-toggle"
+      type="button" data-toggle="dropdown">
+      <%= t "categories.menu" %><span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <% @categories.each do |cate| %>
+        <li>
+          <%= link_to cate.name, category_path(cate) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="search">
+    <%= form_tag(products_path, method: "get",
+      class: "navbar-form", id: "search") do %>
+      <div class="input-group">
+        <%= text_field_tag "search", params[:search],
+          class: "form-control", placeholder: t("search") %>
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </span>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="dropdown sort">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+    <% if params[:filter].nil? %>
+      <%= t "filter.sort_by" %>
+    <% else %>
+      <%= params[:filter] %>
+    <% end %>
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li>
+      <%= link_to t("filter.all"), products_path(filter: t("filter.all")) %>
+    </li>
+    <li>
+      <%= link_to t("filter.rating"), products_path(filter: t("filter.rating")) %>
+    </li>
+    <li>
+      <%= link_to t("filter.alpha"), products_path(filter: t("filter.alpha")) %>
+    </li>
+    <li>
+      <%= link_to t("filter.price_high_to_low"),
+        products_path(filter: t("filter.price_high_to_low")) %>
+    </li>
+    <li>
+      <%= link_to t("filter.price_low_to_high"),
+        products_path(filter: t("filter.price_low_to_high")) %>
+    </li>
+  </ul>
+</div>
+<div class="container">
+  <div class="row">
+    <%= render @products %>
+  </div>
+</div>
+<div class="pag"><%= paginate @products %></div>

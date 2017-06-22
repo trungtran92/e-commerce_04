@@ -76,6 +76,7 @@ en:
   update: "update"
   name: "Name"
   unkonw: "Unknow"
+  search: "Search"
   flash:
     success:
       Login_success: "Login success"
@@ -123,6 +124,7 @@ en:
     user_not_deleted: "user not deleted"
     delete_users?: "you want to delete this users"
   category:
+    category: "Categories"
     manager_category: "Manager Category"
     add_new_category: "add new category"
     category_name: "category name"
@@ -153,4 +155,16 @@ en:
     rate: "rate"
     rate_point: "rate_point"
     hot_trend_products: "hot trend products"
+    index: "index"
+    title: "title"
+  filter:
+    title: "title"
+    sort_by: "sort by"
+    all: "all"
+    most_viewed: "Most viewed"
+    rating: "rating"
+    oldest: "oldest"
+    alpha: "Alphabet"
+    price_high_to_low: "Price: High to Low"
+    price_low_to_high: "Price: Low to High"
 

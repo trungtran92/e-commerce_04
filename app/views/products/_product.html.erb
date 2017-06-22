@@ -1,0 +1,12 @@
+<div class="col-sm-4 col-md-4">
+  <div class="thumbnail">
+    <%= image_tag product.image.url %>
+    <div class="caption">
+      <h4><%= link_to product.name, product_path(product) %></h4>
+      <p><%= product.description %></p>
+      <p><%=  product.price%></p>
+    </div>
+    <p><%= link_to t("products.add_cart"),
+      method: :post, class: "btn btn-primary add-cart" %></p>
+  </div>
+</div>

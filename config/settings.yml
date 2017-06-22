@@ -16,3 +16,5 @@ maximum_name: 50
 resize_to_fit_width: 50
 resize_to_fit_height: 50
 limit_info: 70
+product:
+  precision: 0
