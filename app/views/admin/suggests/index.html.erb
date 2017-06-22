@@ -1,0 +1,21 @@
+<% provide :title, t("suggests.manage_suggest") %>
+<h1><%= t "suggests.manage_suggest" %></h1>
+
+<table class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <th><%= t "no" %></th>
+    <th><%= t "name" %></th>
+    <th><%= t "suggests.descrition"%></th>
+    <th><%= t "update" %></th>
+    <th> <%= t "suggests.action" %></th>
+    <th><%= t "delete" %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render partial: "admin/suggests/suggest", collection: @suggests %>
+  </tbody>
+  <div class="paginate">
+    <%= paginate @suggests %>
+  </div>
+</table>
