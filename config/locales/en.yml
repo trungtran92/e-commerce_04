@@ -77,6 +77,12 @@ en:
   name: "Name"
   unkonw: "Unknow"
   search: "Search"
+  submit: "Submit"
+  suggests:
+    new_suggest_product: "New suggest product"
+    suggest: "Suggest"
+    suggest_create: "Create Suggest"
+    add_new_suggest: "Add new suggest"
   flash:
     success:
       Login_success: "Login success"
@@ -90,6 +96,7 @@ en:
       delete_category_success: "delete category success"
       update_product_success: "update product success"
       destroy_product_success: "destroy product success"
+      create_suggest_cuccess: "create suggest cuccess"
     danger:
       login_fail: "Invalid email/password combination"
       register_failed: "Register failed"
@@ -101,6 +108,7 @@ en:
       create_product_fail: "create product fail"
       update_product_fail: "update product fail"
       destroy_product_fail: "destroy product fail"
+      create_suggest_fail: "create suggest fail"
     warning:
       category_warning: "cant load category"
       trend_product_warning: "not found hot trend product"
