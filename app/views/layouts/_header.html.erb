@@ -40,6 +40,12 @@
         <% else %>
           <li><%= link_to t("log_in"), login_path %></li>
         <% end %>
+        <li class="nav">
+          <%= link_to carts_path, class: "fa fa-cart-arrow-down" do %>
+            <%= t("cart") %>
+            (<%= session[:cart].present? ? session[:cart].size : 0 %>)
+          <% end %>
+        </li>
       </ul>
     </nav>
   </div>

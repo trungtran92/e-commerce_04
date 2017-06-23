@@ -17,9 +17,15 @@
     </h4>
     <%= rating_for @product, "rating", star: 5 %>
     <div class="btn-group" role="group">
-      <%= link_to t("products.add_cart"),
-        cart_path(id: @product.id), method: :post,
-        class: "btn btn-info right" %>
+      <%= form_tag carts_path do %>
+        <%= hidden_field_tag :product_id, @product.id %>
+        <%= number_field_tag :quantity, Settings.cart.init_quantity,
+          min: Settings.cart.minimum_quantity, class: "quantity" %>
+        <%= button_tag class: "btn btn-primary" do %>
+          <i class="glyphicon glyphicon-shopping-cart"></i>
+          <%= t "products.add_to_cart" %>
+        <% end %>
+      <% end %>
     </div>
     <h3>
       <span class="label label-default">
