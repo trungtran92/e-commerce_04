@@ -83,6 +83,12 @@ en:
     suggest: "Suggest"
     suggest_create: "Create Suggest"
     add_new_suggest: "Add new suggest"
+    action: "action"
+    reject: "reject"
+    accept: "accept"
+    update_success: "update suggest success"
+    update_fail: "update suggest fail"
+    no_suggest: "not found suggest"
   flash:
     success:
       Login_success: "Login success"

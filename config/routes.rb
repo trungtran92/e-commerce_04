@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     resources :categories
     resources :users, only: [:index, :destroy]
     resources :products
+    resources :suggests
   end
 end
