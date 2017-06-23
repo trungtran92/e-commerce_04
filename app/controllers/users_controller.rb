@@ -34,12 +34,6 @@ class UsersController < ApplicationController
 
   private
 
-  def require_login
-    return if logged_in?
-    flash[:danger] = t "please_log_in"
-    redirect_to login_path
-  end
-
   def user_params
     params.require(:user).permit :name, :email, :password,
       :password_confirmation
