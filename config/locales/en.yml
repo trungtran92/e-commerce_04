@@ -88,6 +88,8 @@ en:
   step_two: "step_two"
   add_product_cart?: "Add product to cart ?"
   submit: "Submit"
+  import_csv: "Import CSV"
+  import: "Import"
   suggests:
     new_suggest_product: "New suggest product"
     suggest: "Suggest"
@@ -113,6 +115,7 @@ en:
       update_product_success: "update product success"
       destroy_product_success: "destroy product success"
       create_suggest_cuccess: "create suggest cuccess"
+      product_imported_success: "product imported success."
     danger:
       login_fail: "Invalid email/password combination"
       register_failed: "Register failed"
@@ -125,6 +128,7 @@ en:
       update_product_fail: "update product fail"
       destroy_product_fail: "destroy product fail"
       create_suggest_fail: "create suggest fail"
+      product_imported_fail: "product imported fail."
     warning:
       category_warning: "cant load category"
       trend_product_warning: "not found hot trend product"

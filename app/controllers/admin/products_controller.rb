@@ -1,7 +1,7 @@
 class Admin::ProductsController < ApplicationController
   included Admin::AdminHelper
   before_action :verify_admin
-  before_action :load_product, except: [:index, :new, :create]
+  before_action :load_product, except: [:index, :new, :create, :import]
   before_action :load_category, except: [:destroy]
 
   def index
@@ -48,6 +48,15 @@ class Admin::ProductsController < ApplicationController
       else
         flash[:danger] = t "flash.danger.destroy_product_fail"
       end
+    end
+    redirect_to admin_products_path
+  end
+
+  def import
+    if Product.import(params[:file])
+      flash[:success] = t "flash.success.product_imported_success"
+    else
+      flash[:danger] = t "flash.danger.product_imported_fail"
     end
     redirect_to admin_products_path
   end
