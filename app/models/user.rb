@@ -10,4 +10,5 @@ class User < ApplicationRecord
     length: {minimum: Settings.password_minimum}, allow_nil: true
 
   has_secure_password
+  ratyrate_rater
 end

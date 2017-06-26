@@ -1,7 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :category
   has_many :order_details, dependent: :destroy
-  has_many :rates, dependent: :destroy
 
   mount_uploader :image, ImageUploader
 
@@ -18,4 +17,5 @@ class Product < ApplicationRecord
   scope :rating, -> {order(rate_point: :desc)}
   scope :price_high_to_low, -> {order(price: :desc)}
   scope :price_low_to_high, -> {order(price: :asc)}
+  ratyrate_rateable "rating"
 end
