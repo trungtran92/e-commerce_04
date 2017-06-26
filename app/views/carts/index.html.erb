@@ -65,7 +65,7 @@
     <div class="step-2 pull-right">
       <% if @quantity_product.size > 0 %>
         <%= link_to t(".step_two"),
-          current_user ? new_user_order_path(current_user) : login_path,
+          current_user ? new_user_path(current_user) : login_path,
           class: "fa fa-long-arrow-right btn btn-default" %>
       <% else %>
         <%= link_to t(".new_cart"), products_path,

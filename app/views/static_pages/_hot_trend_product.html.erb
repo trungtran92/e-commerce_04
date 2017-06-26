@@ -4,13 +4,6 @@
       <%= image_tag hot_trend_product.image.url %>
     <% end %>
     <h4><%= link_to hot_trend_product.name, product_path(hot_trend_product) %></h4>
-    <div class="ratings">
-      <span class="glyphicon glyphicon-star"></span>
-      <span class="glyphicon glyphicon-star"></span>
-      <span class="glyphicon glyphicon-star"></span>
-      <span class="glyphicon glyphicon-star"></span>
-      <span class="glyphicon glyphicon-star-empty"></span>
-    </div>
     <p>
       <%= truncate hot_trend_product.description, length: Settings.limit_info %>
     </p>
