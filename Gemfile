@@ -7,6 +7,7 @@ end
 
 gem "bcrypt", "~> 3.1.7"
 gem "bootstrap-sass", "~> 3.3.6"
+gem "carrierwave", "~> 0.10.0"
 gem "config"
 gem "coffee-rails", "~> 4.2"
 gem "jbuilder", "~> 2.5"
@@ -14,12 +15,13 @@ gem "puma", "~> 3.7"
 gem "rails", "~> 5.1.1"
 gem "sqlite3"
 gem "sass-rails", "~> 5.0"
+gem "ratyrate"
+gem "turbolinks", "~> 5"
 gem "turbolinks", "~> 5"
 gem "uglifier", "~> 1.3.0"
 gem "kaminari"
 gem "rubocop", "~> 0.49.1", require: false
 gem "jquery-rails", "4.3.1"
-gem "carrierwave", "~> 0.10.0"
 gem "mini_magick", "~> 4.3"
 
 group :development, :test do

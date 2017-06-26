@@ -9,12 +9,13 @@
     <h4><%= t "products.description" %></h4>
     <%= @product.description %>
     <h4>
-        <%= t "products.quantity" %>: <%= @product.quantity %>
+      <%= t "products.quantity" %>: <%= @product.quantity %>
     </h4>
     <h4>
-        <%= t "products.price" %>: <%= @product.price %>
-        <%= t "products.vnd" %>
+      <%= t "products.price" %>: <%= @product.price %>
+      <%= t "products.vnd" %>
     </h4>
+    <%= rating_for @product, "rating", star: 5 %>
     <div class="btn-group" role="group">
       <%= link_to t("products.add_cart"),
         cart_path(id: @product.id), method: :post,
