@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get "logout", to: "sessions#destroy"
   resources :users
   resources :products
-  resources :cart
+  resources :carts
   resources :category
   resources :suggests
 
