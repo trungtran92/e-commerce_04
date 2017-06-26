@@ -24,7 +24,19 @@
       </td>
     </tr>
   </tbody>
-  <div class="paginate">
-    <%= paginate @products %>
+
+  <div class="col-md-12 pagi">
+    <div class="paginate">
+      <%= paginate @products %>
+    </div>
+    <div class="col-md-2 col-md-offset-4 import-csv">
+      <%= form_tag import_admin_products_path, multipart: true do %>
+        <div class="btn btn-success fileinput-button csv">
+          <i class="fa fa-pencil"></i>
+          <%= file_field_tag :file %>
+        </div>
+        <%= submit_tag t("import"), class: "btn btn-default import-btn" %>
+      <% end %>
+    </div>
   </div>
 </table>

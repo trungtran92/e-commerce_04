@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :categories
     resources :users, only: [:index, :destroy]
-    resources :products
+    resources :products do
+      collection {post :import}
+    end
     resources :suggests
   end
 end
