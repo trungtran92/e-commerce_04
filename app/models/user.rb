@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  rolify
   ratyrate_rater
 
   devise :database_authenticatable, :registerable,
