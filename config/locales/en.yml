@@ -90,6 +90,9 @@ en:
   submit: "Submit"
   import_csv: "Import CSV"
   import: "Import"
+  sign_in_with_facebook: "sign in with Facebook"
+  sign_in_with_google: "sign in with Google"
+  sign_in_with_twitter: "sign in with Twitter"
   suggests:
     new_suggest_product: "New suggest product"
     suggest: "Suggest"

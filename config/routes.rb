@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  get "sessions/new"
-
+  devise_for :users,
+    controllers:{omniauth_callbacks: "users/omniauth_callbacks"}
   root "static_pages#home"
   get "login", to: "sessions#new"
   post "login", to: "sessions#create"
   get "logout", to: "sessions#destroy"
+  post "/rate", to: "rater#create", as: "rate"
   resources :users
   resources :products
   resources :carts
