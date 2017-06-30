@@ -30,6 +30,7 @@ gem "kaminari"
 gem "rubocop", "~> 0.49.1", require: false
 gem "jquery-rails", "4.3.1"
 gem "mini_magick", "~> 4.3"
+gem "figaro"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

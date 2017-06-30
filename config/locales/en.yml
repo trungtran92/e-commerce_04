@@ -50,8 +50,13 @@ en:
   new_user: "New user?"
   remember_me: "remember me"
   edit_profile: "edit profile"
+  step_two: "Step two"
   recently_viewed_products: "Recently Viewed Products"
   list_order: "list order"
+  order_now: "order now"
+  shipping_address: "shipping address"
+  shipping_name: "shipping name"
+  shipping_email: "shipping email"
   profile: "Profile"
   settings: "Settings"
   account: "account"
@@ -93,6 +98,8 @@ en:
   sign_in_with_facebook: "sign in with Facebook"
   sign_in_with_google: "sign in with Google"
   sign_in_with_twitter: "sign in with Twitter"
+  dear: "Dear"
+  content_mail: "You have successfully ordered. Your order is being processed"
   suggests:
     new_suggest_product: "New suggest product"
     suggest: "Suggest"
@@ -119,6 +126,7 @@ en:
       destroy_product_success: "destroy product success"
       create_suggest_cuccess: "create suggest cuccess"
       product_imported_success: "product imported success."
+      order_success: "order success please check mail"
     danger:
       login_fail: "Invalid email/password combination"
       register_failed: "Register failed"
@@ -132,6 +140,7 @@ en:
       destroy_product_fail: "destroy product fail"
       create_suggest_fail: "create suggest fail"
       product_imported_fail: "product imported fail."
+      orders_create_failed: "order create fail"
     warning:
       category_warning: "cant load category"
       trend_product_warning: "not found hot trend product"
