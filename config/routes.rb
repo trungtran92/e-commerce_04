@@ -7,10 +7,14 @@ Rails.application.routes.draw do
   get "logout", to: "sessions#destroy"
   post "/rate", to: "rater#create", as: "rate"
   resources :users
+  resources :users do
+    resources :orders, only: [:new, :create, :show]
+  end
   resources :products
   resources :carts
   resources :category
   resources :suggests
+  resources :orders
 
   get "/static_pages/*page", to: "static_pages#show"
 
