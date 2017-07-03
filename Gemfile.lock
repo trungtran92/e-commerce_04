@@ -63,6 +63,8 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    chatwork (0.4.1)
+      faraday (~> 0.9)
     childprocess (0.7.0)
       ffi (~> 1.0, >= 1.0.11)
     coffee-rails (4.2.2)
@@ -310,6 +312,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   carrierwave (~> 0.10.0)
+  chatwork
   coffee-rails (~> 4.2)
   config
   devise

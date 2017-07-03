@@ -8,6 +8,7 @@ end
 gem "bcrypt", "~> 3.1.7"
 gem "bootstrap-sass", "~> 3.3.6"
 gem "carrierwave", "~> 0.10.0"
+gem "chatwork"
 gem "config"
 gem "coffee-rails", "~> 4.2"
 gem "devise"
