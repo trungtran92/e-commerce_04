@@ -14,6 +14,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require chartkick
 //= require jquery.raty
 //= require social-share-button
 //= require ratyrate
