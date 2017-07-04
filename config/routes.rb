@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   resources :orders
 
   get "/static_pages/*page", to: "static_pages#show"
+  get "/chatwork", to: "chatwork#index"
+  post "/chatwork", to: "chatwork#send_message"
 
   namespace :admin do
     resources :categories

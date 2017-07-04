@@ -100,6 +100,10 @@ en:
   sign_in_with_twitter: "sign in with Twitter"
   dear: "Dear"
   content_mail: "You have successfully ordered. Your order is being processed"
+  room_id: "Room ID"
+  user_id: "User id"
+  content: "Content"
+  sent_message: "Sent Message"
   suggests:
     new_suggest_product: "New suggest product"
     suggest: "Suggest"
