@@ -32,7 +32,7 @@
 en:
   hello: "Hello world"
   static_pages:
-    title: "Project 1"
+    title: "Project 2"
     home: "Home Pages"
     about: "About"
     help: "Help"
@@ -131,7 +131,7 @@ en:
       delete_category_success: "delete category success"
       update_product_success: "update product success"
       destroy_product_success: "destroy product success"
-      create_suggest_cuccess: "create suggest cuccess"
+      create_suggest_success: "create suggest success"
       product_imported_success: "product imported success."
       order_success: "order success please check mail"
     danger:
@@ -185,7 +185,7 @@ en:
     "user_not_admin": "user not admin"
   user_admin: "admin"
   products:
-    chose_product: "Chose categorie"
+    chose_product: "Choose category"
     btn_create: "Create product"
     manage_product: "Manage Product"
     name: "name"

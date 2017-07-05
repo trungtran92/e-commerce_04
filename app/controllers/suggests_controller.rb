@@ -9,7 +9,7 @@ class SuggestsController < ApplicationController
     @suggest = Suggest.new suggest_params
     @suggest.user =  current_user
     if @suggest.save
-      flash[:success] = t "flash.success.create_suggest_cuccess"
+      flash[:success] = t "flash.success.create_suggest_success"
       redirect_to  root_path
     else
       flash.now[:danger] = t "flash.danger.create_suggest_fail"
