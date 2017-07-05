@@ -15,6 +15,7 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require jquery.raty
+//= require social-share-button
 //= require ratyrate
 //= require rails-ujs
 //= require_tree .
