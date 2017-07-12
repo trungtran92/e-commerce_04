@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   def load_user
-    @user = User.find_by id: params[:user_id]
+    @user = User.find_by id: params[:id]
     return if @user
     flash[:danger] = t "please_log_in"
     redirect_to root_url

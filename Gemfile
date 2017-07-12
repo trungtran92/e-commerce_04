@@ -28,6 +28,7 @@ gem "rails", "~> 5.1.1"
 gem "ratyrate"
 gem "roo"
 gem "rubocop", "~> 0.49.1", require: false
+
 gem "sass-rails", "~> 5.0"
 gem "social-share-button"
 gem "turbolinks", "~> 5"
@@ -35,10 +36,13 @@ gem "turbolinks", "~> 5"
 gem "uglifier", "~> 1.3.0"
 
 group :development, :test do
+  gem "rspec-rails", "~> 3.5"
   gem "sqlite3"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "capybara", "~> 2.13"
+  gem "simplecov", require: false
   gem "selenium-webdriver"
+  gem "factory_girl_rails"
 end
 
 group :development do
@@ -47,6 +51,13 @@ group :development do
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console", ">= 3.3.0"
+end
+
+group :test do
+  gem "faker"
+  gem "shoulda-matchers", git: "https://github.com/thoughtbot/shoulda-matchers.git", branch: "rails-5"
+  gem "database_cleaner", "~> 1.5"
+  gem "rails-controller-testing"
 end
 
 group :production do
