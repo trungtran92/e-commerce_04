@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  belongs_to :category
+  belongs_to :category, foreign_key: :category_id
   has_many :order_details, dependent: :destroy
 
   mount_uploader :image, ImageUploader
@@ -13,10 +13,12 @@ class Product < ApplicationRecord
     .limit Settings.hot_trend_products}
   scope :search, ->search {where "name || price like ?", "%#{search}%"}
   scope :approved_status, ->{where(status: true)}
-  scope :alphabet, -> {order(name: :asc)}
-  scope :rating, -> {order(rate_point: :desc)}
-  scope :price_high_to_low, -> {order(price: :desc)}
-  scope :price_low_to_high, -> {order(price: :asc)}
+  scope :alphabet, -> {order name: :asc}
+  scope :rating, -> {order rate_point: :desc}
+  scope :price_high_to_low, -> {order price: :desc}
+  scope :price_low_to_high, -> {order price: :asc}
+  scope :order_newest, -> {order created_at: :desc}
+
   ratyrate_rateable "rating"
 
   def self.import(file)
